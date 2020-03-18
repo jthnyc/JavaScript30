@@ -7,7 +7,6 @@
 </head>
 <body>
 
-
   <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
@@ -45,6 +44,35 @@
       <kbd>L</kbd>
       <span class="sound">tink</span>
     </div>
+
+    <div data-key="90" class="key">
+      <kbd>Z</kbd>
+      <span class="sound">nice-work</span>
+    </div>
+    <div data-key="88" class="key">
+      <kbd>X</kbd>
+      <span class="sound">phone</span>
+    </div>
+    <div data-key="67" class="key">
+      <kbd>C</kbd>
+      <span class="sound">seriously</span>
+    </div>
+    <div data-key="86" class="key">
+      <kbd>V</kbd>
+      <span class="sound">sigh</span>
+    </div>
+    <div data-key="66" class="key">
+      <kbd>B</kbd>
+      <span class="sound">friday</span>
+    </div>
+    <div data-key="78" class="key">
+      <kbd>N</kbd>
+      <span class="sound">wait</span>
+    </div>
+    <div data-key="77" class="key">
+      <kbd>M</kbd>
+      <span class="sound">woohoo</span>
+    </div>
   </div>
 
   <audio data-key="65" src="sounds/clap.wav"></audio>
@@ -57,11 +85,20 @@
   <audio data-key="75" src="sounds/tom.wav"></audio>
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
+  <audio data-key="90" src="sounds/nice-work.wav"></audio>
+  <audio data-key="88" src="sounds/pick-up-the-phone-1.wav"></audio>
+  <audio data-key="67" src="sounds/seriously.wav"></audio>
+  <audio data-key="86" src="sounds/sigh-1.wav"></audio>
+  <audio data-key="66" src="sounds/thank-god-its-friday.wav"></audio>
+  <audio data-key="78" src="sounds/wait-a-minute.wav"></audio>
+  <audio data-key="77" src="sounds/woohoo.wav"></audio>
+
 <script>
   function playSound(e) {
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
     const key = document.querySelector(`div[data-key="${e.keyCode}"]`)
-    if (!audio) return;
+    // console.log(e.keyCode)
+    // if (!audio) return;
     audio.currentTime = 0;
     audio.play()
     key.classList.add('playing')
