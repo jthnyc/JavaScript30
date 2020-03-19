@@ -60,12 +60,15 @@
   </style>
 
   <script>
-    const input = document.querySelectorAll('.controlls input');
+    const inputs = document.querySelectorAll('.controls input');
+    console.log("ALL INPUTS: ", inputs)
     function handleUpdate() {
-      console.log(this.value)
+      const suffix = this.dataset.sizing;
+
     }
 
-    inputs.forEach(input => input.addEventListner)
+    inputs.forEach(input => input.addEventListener('change', handleUpdate))
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate))
 
   </script>
 
