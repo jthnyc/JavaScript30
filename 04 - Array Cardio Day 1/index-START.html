@@ -75,9 +75,15 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-    let instances = data.reduce(function(accumulator, currentValue) {
-      return 
-    })
+    let instances = data.reduce((allNames, name) => {
+      if (name in allNames) {
+        allNames[name]++
+      } else {
+        allNames[name] = 1
+      }
+      return allNames
+    }, {})
+    console.log("INSTANCES: ", instances)
   </script>
 </body>
 </html>
