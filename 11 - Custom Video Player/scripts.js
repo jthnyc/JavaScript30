@@ -22,10 +22,10 @@ const updateButton = () => {
   toggle.textContent = icon;
 };
 
-const skip = () => {
-  //   console.log(this.dataset);
+// doesn't seem to like arrow functions for this particular method
+function skip() {
   video.currentTime += parseFloat(this.dataset.skip);
-};
+}
 
 // const handleRangeUpdate = () => {};
 
