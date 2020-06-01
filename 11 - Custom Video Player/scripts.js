@@ -23,8 +23,11 @@ const updateButton = () => {
 };
 
 const skip = () => {
-  console.log(this.dataset);
+  //   console.log(this.dataset);
+  video.currentTime += parseFloat(this.dataset.skip);
 };
+
+// const handleRangeUpdate = () => {};
 
 // HOOK EVENT LISTENERS
 video.addEventListener("click", togglePlay);
